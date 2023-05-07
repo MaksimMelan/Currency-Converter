@@ -74,8 +74,6 @@ namespace Currency_Converter
                     default:
                         Console.WriteLine(wrongOption);
                         break;
-
-
                 }
                 
             }
