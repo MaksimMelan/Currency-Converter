@@ -18,9 +18,6 @@ namespace Currency_Converter
             const string optionFive = "5";
             const string optionSix = "6";
             const string optionEight = "7";
-            
-
-
 
             double rurCount = 1000, usdCount = 1000, cnhCount = 1000;
             double usdRur = 76.82;
@@ -30,21 +27,19 @@ namespace Currency_Converter
             bool isExit = false;
             string userInput;                      
             string exitProgramMessege = "Завершение работы программы.\nДосвидания!";
-            string programMenu = $"На вашем счету {rurCount} рублей, {usdCount} долларов,{cnhCount} юаней." +
-                $"\nКурс валют USD/RUR: {usdRur}, USD/CNH: {usdCnh}, CNH/RUR: {cnhRur}." +              
-                $" Операции на выбор:" +
-                $"\n1 - обменять рубли на доллары. 2 - обменять рубли на юани." +
-                $"\n3 - обменять доллраны на рубли. 4 - обменять доллары на юани." +
-                $"\n5 - обмен юани на рубли. 6 - обмен юаней на доллары." +
-                $"\n7 - закрыть программу";
             string wrongOption = "Такого варианта нет";
             string requestPurchaseVolume = $"Какой обобъём меняете?";
 
-
-
-
             while (isExit == false)
             {
+                string programMenu = $"На вашем счету {rurCount} рублей, {usdCount} долларов,{cnhCount} юаней." +
+                                     $"\nКурс валют USD/RUR: {usdRur}, USD/CNH: {usdCnh}, CNH/RUR: {cnhRur}." +
+                                     $" Операции на выбор:" +
+                                     $"\n1 - обменять рубли на доллары. 2 - обменять рубли на юани." +
+                                     $"\n3 - обменять доллраны на рубли. 4 - обменять доллары на юани." +
+                                     $"\n5 - обмен юани на рубли. 6 - обмен юаней на доллары." +
+                                     $"\n7 - закрыть программу";
+
                 Console.WriteLine(programMenu);
                 userInput = Console.ReadLine();
 
@@ -52,7 +47,7 @@ namespace Currency_Converter
                 {
                     case optionОne:
                         Console.WriteLine(requestPurchaseVolume);
-                        purchaseVolume = Convert.ToDouble(Console.ReadLine());
+                        purchaseVolume = (float) Convert.ToDouble(Console.ReadLine());
 
                         rurCount -= purchaseVolume;
                         usdCount += purchaseVolume / usdCount;
