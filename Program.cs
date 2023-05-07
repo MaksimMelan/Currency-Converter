@@ -40,27 +40,49 @@ namespace Currency_Converter
                                      $"\n5 - обмен юани на рубли. 6 - обмен юаней на доллары." +
                                      $"\n7 - закрыть программу";
 
+
+
                 Console.WriteLine(programMenu);
                 userInput = Console.ReadLine();
+                
 
                 switch (userInput)
                 {
                     case optionОne:
                         Console.WriteLine(requestPurchaseVolume);
-                        purchaseVolume = (float) Convert.ToDouble(Console.ReadLine());
-
+                        purchaseVolume = (float)Convert.ToDouble(Console.ReadLine());
                         rurCount -= purchaseVolume;
-                        usdCount += purchaseVolume / usdCount;
+                        usdCount += purchaseVolume / usdRur;
                         break;
                     case optionTwo:
+                        Console.WriteLine(requestPurchaseVolume);
+                        purchaseVolume = (float)Convert.ToDouble(Console.ReadLine());
+                        rurCount -= purchaseVolume;
+                        cnhCount += purchaseVolume / cnhRur;
                         break;
                     case optionThree:
+                        Console.WriteLine(requestPurchaseVolume);
+                        purchaseVolume = (float)Convert.ToDouble(Console.ReadLine());
+                        usdCount -= purchaseVolume;
+                        rurCount += purchaseVolume * usdRur;
                         break;
                     case optionFour:
+                        Console.WriteLine(requestPurchaseVolume);
+                        purchaseVolume = (float)Convert.ToDouble(Console.ReadLine());
+                        usdCount -= purchaseVolume;
+                        cnhCount += purchaseVolume / usdCnh;
                         break;
                     case optionFive:
+                        Console.WriteLine(requestPurchaseVolume);
+                        purchaseVolume = (float)Convert.ToDouble(Console.ReadLine());
+                        cnhCount -= purchaseVolume;
+                        rurCount += purchaseVolume * cnhRur;
                         break;
                     case optionSix:
+                        Console.WriteLine(requestPurchaseVolume);
+                        purchaseVolume = (float)Convert.ToDouble(Console.ReadLine());
+                        cnhCount -= purchaseVolume;
+                        usdCount += purchaseVolume / usdCnh;
                         break;
                     case optionEight:
                         Console.WriteLine(exitProgramMessege);
