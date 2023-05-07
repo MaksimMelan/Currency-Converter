@@ -40,11 +40,8 @@ namespace Currency_Converter
                                      $"\n5 - обмен юани на рубли. 6 - обмен юаней на доллары." +
                                      $"\n7 - закрыть программу";
 
-
-
                 Console.WriteLine(programMenu);
-                userInput = Console.ReadLine();
-                
+                userInput = Console.ReadLine();           
 
                 switch (userInput)
                 {
