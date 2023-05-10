@@ -20,6 +20,7 @@ namespace Currency_Converter
             const string IsExit = "7";
 
             double rurCount = 1000, usdCount = 1000, cnhCount = 1000;
+
             double usdToRur = 76.82;
             double rurToUsd = 1 / usdToRur;
             double usdToCnh = 6.91;
@@ -51,7 +52,7 @@ namespace Currency_Converter
                 {
                     case RurToUsd:
                         Console.WriteLine(requestPurchaseVolume);
-                        purchaseVolume = (float)Convert.ToDouble(Console.ReadLine());
+                        purchaseVolume = Convert.ToDouble(Console.ReadLine());
                         if (purchaseVolume <= rurCount)
                         {
                             rurCount -= purchaseVolume;
@@ -65,7 +66,7 @@ namespace Currency_Converter
 
                     case RurToCnh:
                         Console.WriteLine(requestPurchaseVolume);
-                        purchaseVolume = (float)Convert.ToDouble(Console.ReadLine());
+                        purchaseVolume = Convert.ToDouble(Console.ReadLine());
                         if (purchaseVolume <= rurCount)
                         {
                             rurCount -= purchaseVolume;
@@ -79,7 +80,7 @@ namespace Currency_Converter
 
                     case UsdToRur:
                         Console.WriteLine(requestPurchaseVolume);
-                        purchaseVolume = (float)Convert.ToDouble(Console.ReadLine());
+                        purchaseVolume = Convert.ToDouble(Console.ReadLine());
                         if (purchaseVolume <= usdCount)
                         {
                             usdCount -= purchaseVolume;
@@ -93,7 +94,7 @@ namespace Currency_Converter
 
                     case UsdToCnh:
                         Console.WriteLine(requestPurchaseVolume);
-                        purchaseVolume = (float)Convert.ToDouble(Console.ReadLine());
+                        purchaseVolume = Convert.ToDouble(Console.ReadLine());
                         if (purchaseVolume <= usdCount)
                         {
                             usdCount -= purchaseVolume;
@@ -107,7 +108,7 @@ namespace Currency_Converter
 
                     case CnhToRur:
                         Console.WriteLine(requestPurchaseVolume);
-                        purchaseVolume = (float)Convert.ToDouble(Console.ReadLine());
+                        purchaseVolume = Convert.ToDouble(Console.ReadLine());
                         if (purchaseVolume <= cnhCount)
                         {
                         cnhCount -= purchaseVolume;
@@ -121,7 +122,7 @@ namespace Currency_Converter
 
                     case CnhToUsd:
                         Console.WriteLine(requestPurchaseVolume);
-                        purchaseVolume = (float)Convert.ToDouble(Console.ReadLine());
+                        purchaseVolume = Convert.ToDouble(Console.ReadLine());
                         if (purchaseVolume <= cnhCount)
                         {
                         cnhCount -= purchaseVolume;
